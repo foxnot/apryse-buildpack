@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+echo "apryse-buildpack"
+exit 0

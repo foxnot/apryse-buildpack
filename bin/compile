@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+# bin/compile <build-dir> <cache-dir>
+
+set -e
+
+if [ -n "$BUILDPACK_DEBUG" ]; then
+    set -x
+fi
+
+BUILD_DIR=$1
+CACHE_DIR=$2
+ENV_DIR=$3
+
+cp libPDFNetC.so /user/lib/
+
+
+## INSTALLATION SWING
+#cd /tmp
+#wget https://unlimited.dl.sourceforge.net/project/swig/swig/swig-4.2.1/swig-4.2.1.tar.gz
+#tar xzvf swig-4.2.1.tar.gz
+#cd swig-4.2.1
+#./configure
+#make
+#sudo make install
+
+## INSTALLATION APRYSE
+#cd /tmp
+#git clone https://github.com/PDFTron/PDFNetWrappers
+#cd PDFNetWrappers/PDFNetC
+#wget http://www.pdftron.com/downloads/PDFNetC64.tar.gz
+#tar xzvf PDFNetC64.tar.gz
+#mv PDFNetC64/Headers/ .
+#mv PDFNetC64/Lib/ .
+#cd ..
+#mkdir Build
+#cd Build
+#cmake -D BUILD_PDFNetPHP=ON ..
+#make
+#sudo make install
